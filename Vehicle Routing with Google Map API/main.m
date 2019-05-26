@@ -2,8 +2,6 @@ close all
 clear all
 clc
 
-
-
 % these lines are for world map
 latlim = [23.6 23.68]; % latitude limits
 lonlim = [58.13 58.25]; % longitude limits
@@ -11,6 +9,7 @@ worldmap(latlim,lonlim)
 
 % these lines for geoshow
 fprintf('Loading Map of Oman ......');
+
 % loading these 2 files here which actully load 4 files
 LandArea=geoshow('OMN_adm1.shp');
 RoadNetwork=geoshow('oman_highway.shp');
@@ -35,13 +34,13 @@ c_lat = [23.626776, 23.620957, 23.651618];
 c_lon = [58.220088, 58.190391, 58.194428];
 labels = ["point1","point2","point3"]; % names
 
-% for custoer i used different method
+% for customer i used different method
 % because we needed text on plot
 
 % this line puts a mini triangle at 3 points
 plotm(c_lat,c_lon,'^','MarkerSize',3,'LineWidth',1,'MarkerEdgeColor',[1,0,0])
 
-% this line put test at three points
+% this line puts test at three points
 textm(c_lat(),c_lon,labels)
 hold off % we finished plotting
 
